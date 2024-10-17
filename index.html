@@ -3,29 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple HTML Page</title>
+    <title>Interactive Web Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 0;
             background-color: #f4f4f4;
         }
-        h1 {
-            color: #333;
+        header {
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
         }
-        p {
-            color: #666;
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            padding: 10px 15px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: green;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Simple HTML Page!</h1>
-    <p>This is a basic example of an HTML document. You can edit it as you like.</p>
-    <ul>
-        <li>HTML stands for HyperText Markup Language.</li>
-        <li>It is used to create web pages.</li>
-        <li>HTML elements are the building blocks of web pages.</li>
-    </ul>
+
+<header>
+    <h1>My Interactive Web Page</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+    <h2>Welcome!</h2>
+    <p>This is an interactive web page with a footer, navbar, and some functionality.</p>
+    <button id="actionButton">Click Me!</button>
+    <div id="message"></div>
+</main>
+
+<footer>
+    <p>&copy; 2024 My Interactive Web Page</p>
+</footer>
+
+<script>
+    document.getElementById('actionButton').addEventListener('click', function() {
+        document.getElementById('message').textContent = 'Button clicked! Thank you!';
+    });
+</script>
+
 </body>
 </html>
