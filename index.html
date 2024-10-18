@@ -18,8 +18,17 @@
             color: #666;
         }
     </style>
+    <script>
+        let a = 0;
+        function add(){
+            a++;
+            document.getElementById("num").innerHTML = a;
+        }
+    </script>
 </head>
 <body>
+    <button onclick="add()">count</button>
+    <h2 id="num"></h2>
     <h1>Welcome to My Simple HTML Page! vivek vivek</h1>
     <p>This is a basic example of an HTML document. You can edit it as you like.</p>
     <ul>
